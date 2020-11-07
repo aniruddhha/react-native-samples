@@ -1,0 +1,1 @@
+export const ani = require('./profile-img.jpg'); 
