@@ -5,6 +5,7 @@ import { View, Text, SafeAreaView, TouchableOpacity, FlatList } from 'react-nati
 import Autocomplete from 'react-native-autocomplete-input';
 import { TextInput } from 'react-native-gesture-handler';
 import { Dimensions, Keyboard } from 'react-native';
+import { StatusBar } from 'react-native';
 
 // +919607352625
 
@@ -119,7 +120,7 @@ export default function UiComponent() {
                 console.log(`Head Height - ${sy}`)
                 console.log(`Keyboard Height - ${keyboardHeight}`)
                 console.log(`Md Ht - ${window.height - sy - ev.nativeEvent.layout.height - keyboardHeight}`)
-                setMdHt(window.height - sy - ev.nativeEvent.layout.height - keyboardHeight - 65)
+                setMdHt(window.height - sy - ev.nativeEvent.layout.height - keyboardHeight - StatusBar.currentHeight - 40)
             }}>
                 <TextInput style={{ height: 80 }}></TextInput>
             </View>
