@@ -21,16 +21,7 @@ export default function UiComponent() {
     };
 
     const data = [
-        { name: '#alignment' },
-        { name: '#amazinggg' },
-        { name: '#android-7.0' },
-        { name: '#android-phone-test' },
-        { name: '#Android-test' },
-        { name: '#app-test-mode' },
-        { name: '#APP8thMarch' },
-        { name: '#app_testing' },
-        { name: '#apphashtag' },
-        { name: '#apptesting' },
+
     ];
     return (
         <SafeAreaView style={{ flex: 1 }}>
@@ -46,7 +37,7 @@ export default function UiComponent() {
                 <View style={{ flexDirection: 'row', flex: 1, justifyContent: 'flex-start', alignItems: 'flex-start' }}>
                     <View style={{ flex: 2 }}></View>
                     <Text style={{ flex: 9 }}>
-                        Ani, xyz, pqr
+                        Ani, xyz, pqr,Ani, xyz, pqr,Ani
                         </Text>
                 </View>
                 <View style={{ flex: 1, zIndex: 1, width: '100%', position: 'absolute', top: '100%' }}>
@@ -61,7 +52,7 @@ export default function UiComponent() {
                     />
                 </View>
             </View>
-            <View style={{ flex: 8, backgroundColor: 'green', marginTop: '31%' }}>
+            <View style={{ flex: 8, backgroundColor: 'green' }}>
                 <FlatList
                     data={[
                         { key: 'Android' }, { key: 'iOS' }, { key: 'Java' }, { key: 'Swift' },
@@ -77,7 +68,7 @@ export default function UiComponent() {
                     ItemSeparatorComponent={renderSeparator}
                 />
             </View>
-            <View style={{ flex: 1, backgroundColor: 'blue' }}>
+            <View style={{ flex: 1, backgroundColor: 'blue', position: 'absolute', bottom: 0, width: '100%' }}>
                 <TextInput></TextInput>
             </View>
         </SafeAreaView >
