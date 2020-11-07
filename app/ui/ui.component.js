@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, SafeAreaView, TouchableOpacity, KeyboardAwareScrollView } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity, FlatList } from 'react-native';
 
 import Autocomplete from 'react-native-autocomplete-input';
 import { TextInput } from 'react-native-gesture-handler';
@@ -7,6 +7,18 @@ import { TextInput } from 'react-native-gesture-handler';
 // +919607352625
 
 export default function UiComponent() {
+
+    const renderSeparator = () => {
+        return (
+            <View
+                style={{
+                    height: 1,
+                    width: "100%",
+                    backgroundColor: "#000",
+                }}
+            />
+        );
+    };
 
     const data = [
         { name: '#alignment' },
@@ -37,19 +49,34 @@ export default function UiComponent() {
                         Ani, xyz, pqr
                         </Text>
                 </View>
-                <View style={{ flex: 1, zIndex: 1, width: '80%', left: '10%', position: 'absolute', top: '100%' }}>
+                <View style={{ flex: 1, zIndex: 1, width: '100%', position: 'absolute', top: '100%' }}>
                     <Autocomplete
                         data={data}
-                        defaultValue='a'
-                        renderItem={({ tag, i }) => (
+                        defaultValue=''
+                        renderItem={({ name, i }) => (
                             <TouchableOpacity>
-                                <Text>{i}</Text>
+                                <Text>{name}</Text>
                             </TouchableOpacity>
                         )}
                     />
                 </View>
             </View>
-            <View style={{ flex: 8, backgroundColor: 'green' }}></View>
+            <View style={{ flex: 8, backgroundColor: 'green', marginTop: '31%' }}>
+                <FlatList
+                    data={[
+                        { key: 'Android' }, { key: 'iOS' }, { key: 'Java' }, { key: 'Swift' },
+                        { key: 'Php' }, { key: 'Hadoop' }, { key: 'Sap' },
+                        { key: 'Python' }, { key: 'Ajax' }, { key: 'C++' },
+                        { key: 'Ruby' }, { key: 'Rails' }, { key: '.Net' },
+                        { key: 'Perl' }, { key: 'Sap' }, { key: 'Python' },
+                        { key: 'Ajax' }, { key: 'C++' }, { key: 'Ruby' },
+                        { key: 'Rails' }, { key: '.Net' }, { key: 'Perl' }
+                    ]}
+                    renderItem={({ item, index }) =>
+                        <Text >Hi {index}</Text>}
+                    ItemSeparatorComponent={renderSeparator}
+                />
+            </View>
             <View style={{ flex: 1, backgroundColor: 'blue' }}>
                 <TextInput></TextInput>
             </View>
