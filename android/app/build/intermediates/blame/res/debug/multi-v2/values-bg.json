@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/aniruddha/react-native/myproj/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bg/values-bg.xml",
+            "outputFile": "/home/aniruddha/Desktop/react-native-samples/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bg/values-bg.xml",
             "map": [
                 {
                     "source": "/home/aniruddha/.gradle/caches/transforms-2/files-2.1/639e914bfc1efa21e36199d3ff2c5eef/core-1.1.0/res/values-bg/values-bg.xml",

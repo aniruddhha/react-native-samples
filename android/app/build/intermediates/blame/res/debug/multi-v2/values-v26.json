@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/aniruddha/react-native/myproj/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
+            "outputFile": "/home/aniruddha/Desktop/react-native-samples/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
             "map": [
                 {
                     "source": "/home/aniruddha/.gradle/caches/transforms-2/files-2.1/1cb9b9ea592aa2ea85233be252327dcf/appcompat-1.1.0/res/values-v26/values-v26.xml",

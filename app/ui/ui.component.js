@@ -22,18 +22,13 @@ export default function UiComponent() {
     ];
     return (
         <SafeAreaView style={{ flex: 1 }}>
-            <View style={{ flex: 3, backgroundColor: 'red', zIndex: 1 }}>
-                <View style={{
-                    flexDirection: 'row', flex: 1
-                }}>
+            <View style={{ flex: 1, backgroundColor: 'red', zIndex: 1, position: 'absolute', width: '100%' }}>
+                <View style={{ flexDirection: 'row', flex: 1 }}>
                     <View style={{ flex: 2 }}></View>
                     <View style={{ flex: 9 }}>
                         <Text style={{ fontSize: 11 }}>
-                            You can also connect to the development server over Wi-Fi.
-                            You'll first need to install the app on your device using a USB cable,
-                            but once that has been done you can debug wirelessly by following these instructions.
-                            You'll need your development machine's current IP address before proceeding.
-                        </Text>
+                            You can also connect to the development server over Wi-Fi.  You can also connect to the development server over Wi-Fi.
+                           </Text>
                     </View>
                 </View>
                 <View style={{ flexDirection: 'row', flex: 1, justifyContent: 'flex-start', alignItems: 'flex-start' }}>
@@ -42,7 +37,7 @@ export default function UiComponent() {
                         Ani, xyz, pqr
                         </Text>
                 </View>
-                <View style={{ flex: 1, zIndex: 1, position: 'absolute', width: '80%', top: '70%', left: '10%' }}>
+                <View style={{ flex: 1, zIndex: 1, width: '80%', left: '10%', position: 'absolute', top: '100%' }}>
                     <Autocomplete
                         data={data}
                         defaultValue='a'
@@ -60,5 +55,6 @@ export default function UiComponent() {
             </View>
         </SafeAreaView >
     );
-
 }
+
+//1.53 to 2.11
