@@ -1,4 +1,4 @@
-#Sat Nov 07 14:40:24 IST 2020
+#Wed Nov 11 10:48:18 IST 2020
 base.0=/home/aniruddha/Desktop/react-native-samples/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

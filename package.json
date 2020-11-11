@@ -16,11 +16,16 @@
     "react": "16.13.1",
     "react-native": "0.63.2",
     "react-native-autocomplete-input": "^4.2.0",
+    "react-native-elements": "^3.0.0-alpha.1",
     "react-native-gesture-handler": "^1.8.0",
     "react-native-htmlview": "^0.16.0",
+    "react-native-raw-bottom-sheet": "^2.2.0",
+    "react-native-read-more-text": "^1.1.2",
     "react-native-reanimated": "^1.13.0",
     "react-native-safe-area-context": "^3.1.8",
-    "react-native-screens": "^2.11.0"
+    "react-native-screens": "^2.11.0",
+    "react-native-simple-dialogs": "^1.4.0",
+    "react-native-vector-icons": "^7.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

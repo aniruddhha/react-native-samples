@@ -14,11 +14,10 @@ const screen = Dimensions.get("screen");
 
 export default function UiComponent() {
 
+    const [htFst, setHtFst] = useState(0)
     const [sy, setSy] = useState(0)
-    const [htLst, setHtLst] = useState(0)
     const [mdHt, setMdHt] = useState(0)
 
-    const [dimensions, setDimensions] = useState({ window, screen });
     const [keyboardHeight, setKeyboardHeight] = useState(0);
 
     function onKeyboardDidShow(e) {
@@ -51,13 +50,19 @@ export default function UiComponent() {
     };
 
     const data = [
-        // { name: 'android' },
-        // { name: 'bndroid' },
-        // { name: 'cndroid' }
+        { name: 'android' },
+        { name: 'bndroid' },
+        { name: 'cndroid' },
+        { name: 'android' },
+        { name: 'bndroid' },
+        { name: 'cndroid' },
+        { name: 'android' },
+        { name: 'bndroid' },
+        { name: 'cndroid' }
     ];
     return (
         <SafeAreaView style={{ flex: 1 }}>
-            <View style={{ backgroundColor: 'red', position: 'absolute', width: '100%', top: 0, zIndex: 1 }}>
+            <View onLayout={ev => { setHtFst(ev.nativeEvent.layout.height + ev.nativeEvent.layout.y) }} style={{ backgroundColor: 'red', position: 'absolute', width: '100%', top: 0, zIndex: 1 }}>
                 <View style={{ flexDirection: 'row', flex: 1 }}>
                     <View style={{ flex: 2 }}></View>
                     <View style={{ flex: 9 }}>
@@ -75,20 +80,20 @@ export default function UiComponent() {
                         Ani, xyz, pqr,Ani, xyz, pqr,Ani
                         </Text>
                 </View>
-                <View onLayout={ev => {
-                    console.log(ev.nativeEvent.layout)
-                    setSy(ev.nativeEvent.layout.height + ev.nativeEvent.layout.y)
-                }} style={{ flex: 1, width: '100%', position: 'absolute', top: '100%' }}>
-                    <Autocomplete
-                        data={data}
-                        defaultValue=''
-                        renderItem={({ item, i }) => (
-                            <TouchableOpacity>
-                                <Text>{item.name}</Text>
-                            </TouchableOpacity>
-                        )}
-                    />
-                </View>
+            </View>
+            <View onLayout={ev => {
+                console.log(ev.nativeEvent.layout)
+                setSy(ev.nativeEvent.layout.height + ev.nativeEvent.layout.y)
+            }} style={{ width: '100%', position: 'absolute', zIndex: 1 }}>
+                <Autocomplete
+                    data={data}
+                    defaultValue=''
+                    renderItem={({ item, i }) => (
+                        <TouchableOpacity>
+                            <Text>{item.name}</Text>
+                        </TouchableOpacity>
+                    )}
+                />
             </View>
             <View style={{ backgroundColor: 'green', position: 'absolute', top: sy, alignContent: 'stretch', width: '100%', height: mdHt }}>
                 <FlatList
