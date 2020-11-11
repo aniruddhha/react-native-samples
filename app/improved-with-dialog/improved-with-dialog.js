@@ -202,11 +202,15 @@ export default function ImprovedUiDialogComponent() {
             <Dialog
                 visible={dialogVisible}
                 title="Custom Dialog"
-                onTouchOutside={() => setDialogVisible(false)} >
-                <KeyboardAvoidingView behavior='position' keyboardVerticalOffset={keyboardVerticalOffset}>
-                    <View style={{ height: '30%' }}>
-                        <View style={{ position: 'absolute', width: '100%', zIndex: 1 }}>
-                            <Autocomplete
+                onTouchOutside={() => setDialogVisible(false)}
+                dialogStyle={{ height: '60%' }}
+                contentStyle={{ height: '100%' }}>
+                <View>
+                    <View style={{ width: '100%', height: '20%' }}>
+                        <TextInput style={{ height: '100%' }}> Hi </TextInput>
+                    </View>
+                    <View style={{ width: '100%', height: '60%' }}>
+                        {/* <Autocomplete
                                 data={data}
                                 defaultValue=''
                                 renderItem={({ item }) => (
@@ -214,13 +218,44 @@ export default function ImprovedUiDialogComponent() {
                                         <Text>{item.name}</Text>
                                     </TouchableOpacity>
                                 )}
-                            />
-                        </View>
-                        <View style={{ position: 'absolute', width: '100%', top: 200 }}>
-                            <Button title='Okay'></Button>
-                        </View>
+                            /> */}
+
+
+                        <FlatList
+                            data={[
+                                { key: 'Android' },
+                                { key: 'iOS' },
+                                { key: 'Java' },
+                                { key: 'Swift' },
+                                { key: 'adlsdfm' },
+                                { key: '93t9386' },
+                                { key: 'z,v' },
+                                { key: '654654' },
+                                { key: 'ambn27r7t' },
+                                { key: '3219823r' },
+                                { key: 'zx,xvnv87r' },
+                                { key: 'q-r0sfnfn' },
+                                { key: '981312' },
+                                { key: '98131jlklj2' },
+                            ]}
+                            renderItem={({ item }) =>
+                                <View style={{ flexDirection: 'row', flex: 1, justifyContent: 'center', border: 'red' }}>
+                                    <Text style={{
+                                        flex: 1,
+                                        textAlign: 'center',
+                                        textAlignVertical: 'center',
+                                        fontStyle: 'italic',
+                                        fontWeight: 'bold'
+                                    }}>Hi {item.key}</Text>
+                                </View>
+                            }
+                        />
                     </View>
-                </KeyboardAvoidingView>
+                    <View style={{ width: '100%', height: '10%' }}>
+                        <Button title='Okay'></Button>
+                    </View>
+                </View>
+
             </Dialog>
         </SafeAreaView >
     );
